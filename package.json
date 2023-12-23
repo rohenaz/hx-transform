@@ -3,13 +3,10 @@
   "name": "hx-transform",
   "module": "index.js",
   "type": "module",
-  "author": {
-    "name": "Satchmo",
-    "url": "http://github.com/rohenaz"
-  },
+  "author": "Satchmo (http://github.com/rohenaz)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rohenaz/hx-transform.git"
+    "url": "git+https://github.com/rohenaz/hx-transform.git"
   },
   "scripts": {
     "dev": "serve -C -p 8000 ."
@@ -17,5 +14,16 @@
   "devDependencies": {
     "htmx.org": "^1.9.10",
     "serve": "^11.3.2"
-  }
+  },
+  "description": "HTMX extension for transforming JSON responses before swapping content. This is a dependency free alternative to the [client side templates extension](https://htmx.org/extensions/client-side-templates/).",
+  "bugs": {
+    "url": "https://github.com/rohenaz/hx-transform/issues"
+  },
+  "homepage": "https://github.com/rohenaz/hx-transform#readme",
+  "version": "0.0.1",
+  "main": "index.js",
+  "keywords": [
+    "htmx"
+  ],
+  "license": "MIT"
 }
