@@ -11,7 +11,7 @@ To install via CDN:
 or via npm if you prefer:
 
 ```
-npm i htmx-filter
+npm i @rohenaz/htmx-filter
 ```
 
 Then add the following to your HTML:
