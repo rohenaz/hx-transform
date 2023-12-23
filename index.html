@@ -20,6 +20,7 @@
       }
       const longFactsOnly = (fact) => 
         fact.length > 100 ? fact.fact : "Fact is too short";
+        const transformError = (error) => `<p class="text-red-500">${error}</p>`;
     </script>
   </head>
   <body>
@@ -30,6 +31,7 @@
         <div id="cat-facts" class="my-6 min-h-96 rounded flex flex-col items-center justify-center">
           <p>hx-transform extension demo</p>
         </div>
+        <div id="error" class="text-red-400"></div>
         <div>
           <button
             hx-transform="transformCatFacts"
@@ -56,6 +58,11 @@
           >
             Long Facts Only
           </button>
+          <button
+            hx-transform-error="transformError"
+            hx-get="https://httpstat.us/400"
+            hx-target-error="#error"
+            class="btn btn-primary">Error</button>
         </div>
       </div>
     </div>
