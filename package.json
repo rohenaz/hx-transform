@@ -1,0 +1,14 @@
+{
+  "version:": "0.0.1",
+  "name": "hx-filter",
+  "module": "index.js",
+  "type": "module",
+  "author": {
+    "name": "Satchmo",
+    "url": "http://github.com/rohenaz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rohenaz/hx-filter.git"
+  }
+}
