@@ -1,5 +1,7 @@
 # hx-transform
 
+HTMX extension for transforming JSON responses before swapping content. This is a dependency free alternative to the [client side templates extension](https://htmx.org/extensions/client-side-templates/).
+
 To install via CDN:
 
 ```html
