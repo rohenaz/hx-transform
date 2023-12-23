@@ -1,5 +1,4 @@
 {
-  "version:": "0.0.2",
   "name": "hx-transform",
   "module": "index.js",
   "type": "module",
@@ -20,7 +19,7 @@
     "url": "https://github.com/rohenaz/hx-transform/issues"
   },
   "homepage": "https://github.com/rohenaz/hx-transform#readme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "keywords": [
     "htmx"
