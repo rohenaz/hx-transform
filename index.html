@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./node_modules/htmx.org/dist/htmx.min.js"></script>
+    <script src="./index.js"></script>
+    <script>
+      function transformCatFacts(facts) {
+        return facts.length > 0
+          ? facts.map((fact) => `<li class='text-left'>${fact.text}</li>`).join('')
+          : facts;
+      }
+      const longFactsOnly = (fact) => 
+        fact.length > 100 ? fact.fact : "Fact is too short";
+    </script>
+  </head>
+  <body>
+    <div class="hero min-h-screen bg-base-200">
+      <div class="hero-content text-center flex flex-col">
+        <h1 class="text-5xl font-bold">Cat Facts</h1>
+        <div class="max-w-md" hx-ext="transform-response" hx-swap="innerHTML transition:true" hx-target="#cat-facts">
+        <div id="cat-facts" class="my-6 min-h-96 rounded flex flex-col items-center justify-center">
+          <p>hx-transform extension demo</p>
+        </div>
+        <div>
+          <button
+            hx-transform="transformCatFacts"
+            hx-get="https://cat-fact.herokuapp.com/facts"
+            hx-target="#cat-facts"
+            class="btn btn-primary"
+          >
+            Get Cat Facts
+          </button>
+          <!-- inline example -->
+          <button
+            hx-transform="(fact) => fact.fact"
+            hx-get="https://catfact.ninja/fact"
+            hx-target="#cat-facts"
+            class="btn btn-primary"
+          >
+            Get Cat Fact
+          </button>
+          <button
+            hx-transform="longFactsOnly"
+            hx-get="https://catfact.ninja/fact"
+            hx-target="#cat-facts"
+            class="btn btn-primary"
+          >
+            Long Facts Only
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

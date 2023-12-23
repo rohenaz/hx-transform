@@ -1,6 +1,6 @@
 {
   "version:": "0.0.1",
-  "name": "hx-filter",
+  "name": "hx-transform",
   "module": "index.js",
   "type": "module",
   "author": {
@@ -9,6 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rohenaz/hx-filter.git"
+    "url": "https://github.com/rohenaz/hx-transform.git"
+  },
+  "scripts": {
+    "dev": "serve -C -p 8000 ."
+  },
+  "devDependencies": {
+    "htmx.org": "^1.9.10",
+    "serve": "^11.3.2"
   }
 }
